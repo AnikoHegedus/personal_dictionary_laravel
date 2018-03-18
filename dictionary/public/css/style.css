@@ -1,0 +1,205 @@
+/* HEADER */
+
+#header{
+	width: 100%;
+	height: 14%;
+	background-image: url("../images/dictionary.png");
+	background-size: contain;
+}
+
+#header h1 {
+	padding-top: 3%;
+}
+
+h1,
+h3{
+	text-align: center;
+	padding-left: 0;
+}
+
+/* MENU */
+
+#menu {
+	position: absolute;
+	float: left;
+	margin-left: -10px;
+	width: 150px;
+	height: 100%;
+}
+
+#items {
+	position: relative;
+	background-color: #f2dbb7;
+	padding-top: 40px;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.menu-item {
+	padding: 10px;
+}
+
+.menu-item:hover {
+	background: #DCDCDC;
+}
+
+/* HOME */
+
+#wrapper {
+	text-align: center;
+	padding-left: 0;
+	margin-top: 5%;
+}
+
+button {
+	display: inline-block;
+	margin: 10px;
+	border-radius: 10px;
+	height: 35px;
+	   background: #e4e4e4;
+	  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e4e4e4), to(#ededed));
+	  background: -moz-linear-gradient(#e4e4e4, #ededed);
+	  background: linear-gradient(#e4e4e4, #ededed);
+	  border: solid 1px #c2c2c2;
+	  border-bottom: solid 3px #b2b1b1;
+	  box-shadow: inset 0 0 0 1px #efefef;
+  }
+  
+  #lg1{
+	background: url('https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/255px-Flag_of_the_United_Kingdom.svg.png') center center no-repeat;
+	background-size: cover;
+	opacity:0.7;
+	width: 200px;
+	height: 50px;
+  }
+  
+  #lg2{
+	background: url('http://www.flags.net/images/largeflags/FRAN0001.GIF')  center center no-repeat;
+	background-size: cover;
+	opacity:0.7;
+	width: 200px;
+	height: 50px;
+  }
+  
+  #try,
+  #final,
+  #btn-show-solution{
+	align-items: center;
+	background: #abe4f8;
+	  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#abe4f8), to(#74d0f4));
+	  background: -moz-linear-gradient(#abe4f8, #74d0f4);
+	  background: linear-gradient(#abe4f8, #74d0f4);
+	  border: solid 1px #8cc5d9;
+	  border-bottom: solid 3px #589cb6;
+	  box-shadow: inset 0 0 0 1px #cdeffb;
+	  color: #42788e;
+	  text-shadow: 0 1px 0 #b6e6f9; 
+  }
+  
+  #try:hover,
+  #final:hover,
+  #btn-show-solution:hover{
+	  background: #80d4f5;
+	  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#80d4f5), to(#92dbf6));
+	  background: -moz-linear-gradient(#80d4f5, #92dbf6);
+	  background: linear-gradient(#80d4f5, #92dbf6);
+	  border: solid 1px #79acbe;
+	  border-bottom: solid 3px #589cb6;
+	  box-shadow: inset 0 0 0 1px #b2e6f8; }
+  
+  #add-new-word{
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	  background: #cae285;
+	  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#cae285), to(#a3cd5a));
+	  background: -moz-linear-gradient(#cae285, #a3cd5a);
+	  background: linear-gradient(#cae285, #a3cd5a);
+	  border: solid 1px #aad063;
+	  border-bottom: solid 3px #799545;
+	  box-shadow: inset 0 0 0 1px #e0eeb6;
+	  color: #5d7731;
+	  text-shadow: 0 1px 0 #d0e5a4; }
+	  
+  #add-new-word:hover {
+	  background: #abd164;
+	  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#abd164), to(#b9d972));
+	  background: -moz-linear-gradient(#abd164, #b9d972);
+	  background: linear-gradient(#abd164, #b9d972);
+	  border: solid 1px #98b85b;
+	  border-bottom: solid 3px #799545;
+	  box-shadow: inset 0 0 0 1px #cce3a1; 
+  }
+  
+  .flexbox-container{
+	display: flex;
+	justify-content: center;
+  }
+  
+  .flex-item{
+	margin: 15px;
+  }
+  
+/* ADD NEW WORD */
+
+#submit-new-word{
+  bottom: 30px;
+  left: 30px;
+    background: #cae285;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#cae285), to(#a3cd5a));
+    background: -moz-linear-gradient(#cae285, #a3cd5a);
+    background: linear-gradient(#cae285, #a3cd5a);
+    border: solid 1px #aad063;
+    border-bottom: solid 3px #799545;
+    box-shadow: inset 0 0 0 1px #e0eeb6;
+    color: #5d7731;
+    text-shadow: 0 1px 0 #d0e5a4; }
+    
+#submit-new-word:hover {
+    background: #abd164;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#abd164), to(#b9d972));
+    background: -moz-linear-gradient(#abd164, #b9d972);
+    background: linear-gradient(#abd164, #b9d972);
+    border: solid 1px #98b85b;
+    border-bottom: solid 3px #799545;
+    box-shadow: inset 0 0 0 1px #cce3a1; 
+}
+
+
+/* DICTIONARY */
+
+#show-dictionary-container{
+	display: flex;
+	flex-direction: column;
+	margin-top: 15%;
+	margin-left: 35%;
+	width: 30%;
+}
+
+#show-dictionary{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5%;
+}
+
+table, th, tr, td{
+	text-align: center;
+	width: 30%;
+  }
+
+  table, th, tr {
+	border: 1px solid black;
+	text-align: center;
+  }
+
+/* ABOUT */
+
+#about{
+	margin-top: 10%;
+	margin-left: 20%;
+	margin-right: 10%;
+  }
+#test{
+	margin-left: 70px;
+}

@@ -1,6 +1,8 @@
 <html>
     <body>
-        <h1>My dictionary</h1>
+        @include('header')
+
+        @include('sidebar')
 
         @yield('content')
     </body>

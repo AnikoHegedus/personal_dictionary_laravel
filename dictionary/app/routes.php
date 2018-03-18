@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showHome');
+Route::get('home', 'HomeController@showHome');
 Route::get('showdictionary', 'ShowdictionaryController@showDictionary');
 /*Route::get('showdictionary', function()
 {
