@@ -7,38 +7,51 @@
   <div id="show-dictionary" class="flex-item">
 <table>
       <thead>
-        <th>Difficult</th>
+        <th>Easy</th>
       </thead>
       <tbody>
-      @foreach($allWords as $allWord)
+      @foreach($allEasyWords as $allEasyWord)
         <tr>
-          <td id="word-list-difficult" class="flex-item">
-            {{ $allWord -> lg1 }}
-            {{ $allWord -> lg2 }}
-            {{ $allWord -> difficulty }}
+          <td id="word-list-easy" class="flex-item">
+            {{ $allEasyWord -> lg1 }} - 
+            {{ $allEasyWord -> lg2 }}
           </td>
         </tr>
         @endforeach
       </tbody>
     </table>
 
-<table>
+   <table>
       <thead>
-        <th>Easy</th>
+        <th>Moderate</th>
       </thead>
       <tbody>
-      @foreach($allEasyWords as $allEasyWord)
+      @foreach($allModerateWords as $allModerateWord)
         <tr>
-          <td id="word-list-difficult" class="flex-item">
-            {{ $allEasyWord -> lg1 }}
-            {{ $allEasyWord -> lg2 }}
-            {{ $allEasyWord -> difficulty }}
+          <td id="word-list-moderate" class="flex-item">
+            {{ $allModerateWord -> lg1 }} - 
+            {{ $allModerateWord -> lg2 }}
           </td>
         </tr>
         @endforeach
       </tbody>
     </table>
-   
+
+    <table>
+      <thead>
+        <th>Difficult</th>
+      </thead>
+      <tbody>
+      @foreach($allDifficultWords as $allDifficultWord)
+        <tr>
+          <td id="word-list-difficult" class="flex-item">
+            {{ $allDifficultWord -> lg1 }} - 
+            {{ $allDifficultWord -> lg2 }}
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
   </div>
 </div>
 

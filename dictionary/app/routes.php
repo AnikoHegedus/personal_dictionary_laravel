@@ -12,7 +12,12 @@
 */
 
 Route::get('home', 'HomeController@showHome');
+Route::get('home/randomWord/{lg1}','HomeController@randomWord');
+Route::post('home/checkSubmittedWord','HomeController@checkSubmittedWord');
 Route::get('showdictionary', 'ShowdictionaryController@showDictionary');
+Route::get('about', function() {
+    return View::make('about');
+});
 /*Route::get('showdictionary', function()
 {
     $words = Word::all();

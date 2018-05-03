@@ -7,8 +7,9 @@ class ShowdictionaryController extends BaseController {
 		//return View::make('showdictionary');
 		$allWords = Word::getAllWords();
 		$allEasyWords = Word::getAllEasyWords();
-    	//return View::make('showdictionary')->with('allWords', $allWords, 'allEasyWords', $allEasyWords);
-		return View::make('showdictionary')->with(['allWords'=> $allWords, 'allEasyWords'=> $allEasyWords]);
+		$allModerateWords = Word::getAllModerateWords();
+		$allDifficultWords = Word::getAllDifficultWords();
+		return View::make('showdictionary')->with(['allWords'=> $allWords, 'allEasyWords'=> $allEasyWords, 'allModerateWords'=> $allModerateWords, 'allDifficultWords'=> $allDifficultWords]);
 	}
-
+		
 }
