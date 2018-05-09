@@ -15,6 +15,10 @@ Route::get('home', 'HomeController@showHome');
 Route::get('home/randomWord/{lg1}','HomeController@randomWord');
 Route::post('checkSubmittedWord','CheckSubmittedWordController@checkSubmittedWord');
 Route::post('showAnswer','ShowAnswerController@showAnswer');
+Route::get('addword',function() {
+    return View::make('addword');
+});
+Route::post('addNewWord','AddWordController@addNewWord');
 Route::get('showdictionary', 'ShowdictionaryController@showDictionary');
 Route::get('about', function() {
     return View::make('about');
