@@ -27,9 +27,11 @@ function showRandomWordInLg1(boolean) {
     success: function (data) {
       var lg1 = data[0];
       var lg2 = data[1];
+      var difficulty = "Category of the word: " + data[2];
       $("#word").html(lg1);
-      $("#solution_hidden").val(lg2);
-      
+      $(".solution_hidden").val(lg2);
+      $(".originalWord_hidden").val(lg1);
+      $("#difficulty").html(difficulty);
     },
     error: function (err) {
       console.log(err);

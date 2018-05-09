@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div id="wrapper" style="background-color: {{ isset($color) ? $color : 'white'; }}">
+<div id="wrapper">
 <div id="first-section">
   <div class="flexbox-container">
     <button id="lg1" class="flex-item" >English word</button>
@@ -15,25 +15,26 @@
     <hr>
     <span class="flex-item">My answer:</span>
     
-    {{ Form:: open(array('action' => 'post', 'url' => 'home/checkSubmittedWord')) }}
-    {{ Form::hidden('correctWord', '', array('id' => 'solution_hidden')) }}
+    {{ Form:: open(array('action' => 'post', 'url' => 'checkSubmittedWord')) }}
+    {{ Form::hidden('correctWord', '', array('class' => 'solution_hidden')) }}
+    {{ Form::hidden('originalWord', '', array('class' => 'originalWord_hidden')) }}
     {{ Form::text('submittedWord', '', array('id' => 'answer', 'class' => 'flex-item', 'method' => 'post')) }}
-
-    <!--{{ Form::text('correctWord', 'tessajfd', array('id' => 'correctWord', 'class' => 'flex-item', 'method' => 'post')) }}-->
     {{ Form::button('Go', array('class' => 'btn', 'id' => 'final', 'type' => 'submit')) }}
     {{ Form::close() }}
 
   </div>
 
   <div id="solution" class="flex-item">
-    <button id="btn-show-solution">I want to see the correct answer</button>
+    {{ Form:: open(array('action' => 'post', 'url' => 'showAnswer')) }}
+    {{ Form::hidden('correctWord', '', array('class' => 'solution_hidden')) }}
+    {{ Form::hidden('originalWord', '', array('class' => 'originalWord_hidden')) }}
+    {{ Form::button('I want to see the correct answer', array('class' => 'btn', 'id' => 'btn-show-solution', 'type' => 'submit')) }}
+    {{ Form::close() }}
   </div>
-  
-  <p id="score"> Current score: {{ $score }} </p>
-  
-  <p id="test2"> {{ isset($word) ? $word : 'Default Message'; }}  </p>
+ 
 </div>
-    
+  <p id="difficulty"></p>
+  <!--{{ isset($difficulty) ? 'Category of word: ' . $difficulty : ''; }} -->
 </div>
 
 @stop

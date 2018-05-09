@@ -21,29 +21,20 @@ class HomeController extends BaseController {
 
 	public function randomWord($lg1)
 	{
-		//if(randomnum)
-		$difficulty = '"easy"';
+		$randnum = rand(1, 6);
+		if ($randnum == 1) {
+			$difficulty = '"easy"';
+		} else if (3 < $randnum) {
+			$difficulty = '"difficult"';
+		} else {
+			$difficulty = '"moderate"';
+		}
 		$this->randomWord = Word::randomWord($difficulty);
 		if ($lg1 == 'true') {
-			return [$this->randomWord[0]->lg1, $this->randomWord[0]->lg2];
+			return [$this->randomWord[0]->lg1, $this->randomWord[0]->lg2, $this->randomWord[0]->difficulty];
 		} else {
-			return [$this->randomWord[0]->lg2, $this->randomWord[0]->lg1];
+			return [$this->randomWord[0]->lg2, $this->randomWord[0]->lg1, $this->randomWord[0]->difficulty];
 		}
 		
 	}
-
-	public function checkSubmittedWord()
-	{
-		$submittedWord = Input::get('submittedWord');
-		$correctWord = Input::get('correctWord');
-		if($submittedWord == $correctWord) {
-			$score = 100;
-			$color = "green";
-		} else {
-			$score = 10;
-			$color = "red";
-		}
-		return View::make('home') ->with(['color' => $color, 'score' => $score]);
-	}
-
 }
