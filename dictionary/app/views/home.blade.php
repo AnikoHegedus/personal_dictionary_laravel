@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-
 <div id="wrapper">
 <div id="first-section">
   <div class="flexbox-container">

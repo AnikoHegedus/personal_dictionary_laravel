@@ -30,6 +30,7 @@ class HomeController extends BaseController {
 			$difficulty = '"moderate"';
 		}
 		$this->randomWord = Word::randomWord($difficulty);
+		
 		if ($lg1 == 'true') {
 			return [$this->randomWord[0]->lg1, $this->randomWord[0]->lg2, $this->randomWord[0]->difficulty];
 		} else {
