@@ -13,6 +13,9 @@
 
 Route::get('home', 'HomeController@showHome');
 Route::get('home/randomWord/{lg1}','HomeController@randomWord');
+Route::get('home/deleteScore','HomeController@deleteScore');
+
+
 Route::post('checkSubmittedWord','CheckSubmittedWordController@checkSubmittedWord');
 Route::post('showAnswer','ShowAnswerController@showAnswer');
 Route::get('addword',function() {

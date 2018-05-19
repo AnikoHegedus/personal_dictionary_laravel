@@ -16,6 +16,7 @@ class HomeController extends BaseController {
 	public function showHome()
 	{
 		$this->score = 0;
+
 		return View::make('home') ->with('score', $this->score);
 	}
 
@@ -37,5 +38,10 @@ class HomeController extends BaseController {
 			return [$this->randomWord[0]->lg2, $this->randomWord[0]->lg1, $this->randomWord[0]->difficulty];
 		}
 		
+	}
+
+	public function deleteScore()
+	{
+		DB::table('sessions') ->update(['score' => 0]);    
 	}
 }

@@ -39,4 +39,3 @@ function showRandomWordInLg1(boolean) {
     }
   })
 }
-

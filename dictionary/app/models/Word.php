@@ -9,7 +9,6 @@ class Word extends Eloquent {
 	//protected $table = 'words';
   public static function getAllWords()
 {
-    //return Word::all()->get();
     return $allWords = DB::select('select * from words');
 } 
 
@@ -43,5 +42,17 @@ class Word extends Eloquent {
     }
     
 }
+
+public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->flush();
+
+        $request->session()->regenerate();
+        Store_seat::truncate();
+        return redirect('/');
     }
+
+}
 
