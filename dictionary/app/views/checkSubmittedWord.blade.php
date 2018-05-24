@@ -6,6 +6,7 @@
     <p> {{ isset($correctWord) ? 'The correct answer is: ' . $correctWord : ''; }}  </p>
     <p> {{ isset($submittedWord) ? 'My answer is: ' . $submittedWord : ''; }}  </p>
     <p> {{ isset($score) ? 'Current score is: ' . $score : ''; }}  </p>
+    <p> {{ isset($difficulty) ? '"' . $originalWord . '" is in the following category: ' . $difficulty : ''; }}  </p>
     <div><a href='home'>Go back for a new word</a></div>
     </div>
 @stop
