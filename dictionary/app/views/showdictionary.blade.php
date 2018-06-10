@@ -13,8 +13,11 @@
       @foreach($allEasyWords as $allEasyWord)
         <tr>
           <td id="word-list-easy" class="flex-item">
-            {{ $allEasyWord -> lg1 }} - 
-            {{ $allEasyWord -> lg2 }}
+          {{ Form:: open(array('action' => 'post', 'url' => 'editWord')) }}
+    {{ Form::button($allEasyWord -> lg1 . ' - ' . $allEasyWord -> lg2, array('class' => '', 'id' => 'edit-word', 'type' => 'submit')) }}
+          {{ Form::close() }}
+              <!--{{ $allEasyWord -> lg1 }} - 
+            {{ $allEasyWord -> lg2 }}-->
           </td>
         </tr>
         @endforeach

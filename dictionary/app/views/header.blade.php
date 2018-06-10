@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My dictionary</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">

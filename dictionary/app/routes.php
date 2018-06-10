@@ -23,6 +23,7 @@ Route::get('addword',function() {
 });
 Route::post('addNewWord','AddWordController@addNewWord');
 Route::get('showdictionary', 'ShowdictionaryController@showDictionary');
+Route::post('editWord', 'ShowdictionaryController@editWord');
 Route::get('about', function() {
     return View::make('about');
 });
